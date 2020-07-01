@@ -1,4 +1,4 @@
-const initialState = {};
+const initialState = []
 
 export default function recipesReducer(state = initialState, {type, payload}) {
     switch (type) {

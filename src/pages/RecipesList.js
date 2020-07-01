@@ -12,7 +12,8 @@ export default function RecipesList() {
     console.log("Recipes", recipes)
 
     useEffect(() => {
-        if(!recipes){
+        // IF SELECTOR DOESN'T WORK
+        if(recipes.length === 0){
             dispatch(fetchRecipes)
         }
     }, [dispatch])

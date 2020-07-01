@@ -1,4 +1,4 @@
 export function selectRecipes(reduxState) {
-    // console.log("REDUX STATE:", reduxState.recipes[0])
-    return reduxState.recipes[0]
+    // console.log("REDUX STATE:", reduxState.recipes)
+    return reduxState.recipes
 }
