@@ -1,5 +1,8 @@
-import { combineReducers } from "redux";
+const initialState = [];
 
-export default combineReducers({
-  
-});
+export default function rootReducer(state = initialState, {type, payload}) {
+    switch (type) {
+        default:
+            return state;
+    }
+}
