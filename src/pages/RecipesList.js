@@ -26,7 +26,7 @@ export default function RecipesList() {
             <div className="container">
                 {recipes.map(recipe => {
                     return (
-                        <div className="Recipe">
+                        <div key={recipe.id} className="Recipe">
                             <p><strong>{recipe.title}</strong></p>
                             <img
                                 width="300"
