@@ -15,7 +15,7 @@ export default function RecipesList() {
         if(!recipes){
             dispatch(fetchRecipes)
         }
-    }, [])
+    }, [dispatch])
 
     if(!recipes) return <div>Loading...</div>
 
@@ -23,12 +23,14 @@ export default function RecipesList() {
         <div className="RecipeList">
             <h1>Welcome to Mindful Menu App!</h1>
             <div className="container">
+                <div className="Recipe">
                 <p><strong>{recipes.title}</strong></p>
                 <img
                     width="300"
                     src={recipes.image}
                     alt={`Recipe of "${recipes.title}"`}
                 />
+                </div>
                 
             </div>
             
