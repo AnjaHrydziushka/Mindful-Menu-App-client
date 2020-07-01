@@ -11,12 +11,16 @@ export default function RecipesList() {
     console.log("Recipes", recipes)
 
     useEffect(() => {
-        dispatch(fetchRecipes)
-    }, [dispatch])
+        if(!recipes){
+            dispatch(fetchRecipes)
+        }
+    }, [])
+
+    if(!recipes) return <div>Loading...</div>
 
     return (
         <div>
-            Hello
+            {recipes.title}
         </div>
     )
 }
