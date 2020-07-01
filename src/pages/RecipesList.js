@@ -24,15 +24,18 @@ export default function RecipesList() {
         <div className="RecipeList">
             <h1>Welcome to Mindful Menu App!</h1>
             <div className="container">
-                <div className="Recipe">
-                <p><strong>{recipes.title}</strong></p>
-                <img
-                    width="300"
-                    src={recipes.image}
-                    alt={`Recipe of "${recipes.title}"`}
-                />
-                </div>
-                
+                {recipes.map(recipe => {
+                    return (
+                        <div className="Recipe">
+                            <p><strong>{recipe.title}</strong></p>
+                            <img
+                                width="300"
+                                src={recipe.image}
+                                alt={`Recipe of "${recipe.title}"`}
+                            />
+                        </div>
+                        )
+                    })}
             </div>
             
         </div>
