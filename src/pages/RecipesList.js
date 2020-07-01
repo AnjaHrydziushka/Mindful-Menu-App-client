@@ -7,9 +7,8 @@ export default function RecipesList() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        // console.log("USE EFFECT?", fetchRecipes)
         dispatch(fetchRecipes)
-    }, [])
+    }, [dispatch])
 
     return (
         <div>

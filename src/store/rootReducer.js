@@ -1,8 +1,6 @@
-const initialState = [];
+import { combineReducers } from 'redux';
+import recipes from './recipes/reducer';
 
-export default function rootReducer(state = initialState, {type, payload}) {
-    switch (type) {
-        default:
-            return state;
-    }
-}
+export default combineReducers({
+    recipes
+});
