@@ -9,7 +9,7 @@ export default function RecipesList() {
     const dispatch = useDispatch();
     const recipes = useSelector(selectRecipes);
 
-    console.log("Recipes", recipes)
+    // console.log("Recipes", recipes)
 
     useEffect(() => {
         // IF SELECTOR DOESN'T WORK
