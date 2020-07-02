@@ -15,12 +15,31 @@ export default function OneRecipe() {
     console.log("ONE RECIPE?", oneRecipe)
 
     useEffect(() => {
-        dispatch(fetchRecipes)
-    }, [])
+        if(!oneRecipe){
+            dispatch(fetchRecipes)
+        }
+    },[dispatch])
+
+    if(!oneRecipe) return <div>Loading...</div>
 
     return (
         <div>
-            Hello
+            <h1>{oneRecipe.title}</h1>
+            <img 
+                width="300"
+                scr={oneRecipe.image}
+                alt={`Recipe of "${oneRecipe.title}"`}
+            />
+            <h5>INGREDIENTS:</h5>
+            {oneRecipe.ingredients.map(product => {
+                return (
+                    <div key={product.id}>
+                        <p>{product.name}</p>
+                    </div>
+                )
+            })}
+            <h5>DESCRIPTION:</h5>
+            <p>{oneRecipe.description}</p>
         </div>
     )
 }
