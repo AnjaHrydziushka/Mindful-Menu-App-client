@@ -35,6 +35,7 @@ export default function OneRecipe() {
                 return (
                     <div key={product.id}>
                         <p>{product.name}</p>
+                        <p>{product.unit}</p>
                     </div>
                 )
             })}
