@@ -24,7 +24,28 @@ export default function TagRecipes() {
 
     return (
         <div>
-           HELLO
+           <h1><strong>{tag}</strong></h1>
+           {recipesByTag.map(recipe => {
+               return (
+                   <div key={recipe.id}>
+                       <img
+                            width="300"
+                            src={recipe.image}
+                            alt={`Recipe of "${recipe.title}"`}
+                            onClick={() => history.push(`recipes/${recipe.id}`)}
+                        />
+                        <p><strong>{recipe.title}</strong></p>
+                        
+                        <ul>
+                            {recipe.ingredients.map(one => {
+                                return (
+                                    <li key={one.id}>{one.name}</li>
+                                )
+                            })}
+                        </ul>
+                   </div>
+               )
+           })}
         </div>
     )
 }
