@@ -13,6 +13,6 @@ export function selectRecipeById(id) {
 export function selectRecipesByTag(tag) {
     return (reduxState) => {
         // console.log("NEW SELECTOR:", reduxState.recipes)
-        return reduxState.recipes.find(recipe => recipe.tag === tag)
+        return reduxState.recipes.filter(recipe => recipe.tag === tag)
     }
 }

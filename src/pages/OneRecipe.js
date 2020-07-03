@@ -27,7 +27,7 @@ export default function OneRecipe() {
             <h1>{oneRecipe.title}</h1>
             <img 
                 width="300"
-                scr={oneRecipe.image}
+                src={oneRecipe.image}
                 alt={`Recipe of "${oneRecipe.title}"`}
             />
             <h5>INGREDIENTS:</h5>
