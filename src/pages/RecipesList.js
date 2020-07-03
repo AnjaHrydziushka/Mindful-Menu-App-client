@@ -3,11 +3,13 @@ import { fetchRecipes } from '../store/recipes/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRecipes } from '../store/recipes/selectors';
 import './RecipesStyle.scss';
+import { useHistory } from "react-router-dom";
 
 export default function RecipesList() {
 
     const dispatch = useDispatch();
     const recipes = useSelector(selectRecipes);
+    const history = useHistory();
 
     console.log("Recipes", recipes)
 
@@ -32,6 +34,7 @@ export default function RecipesList() {
                                 width="300"
                                 src={recipe.image}
                                 alt={`Recipe of "${recipe.title}"`}
+                                onClick={() => history.push(`recipes/${recipe.id}`)}
                             />
                         </div>
                         )
