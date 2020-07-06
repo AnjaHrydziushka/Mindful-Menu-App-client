@@ -11,7 +11,7 @@ export default function RecipesList() {
     const recipes = useSelector(selectRecipes);
     const history = useHistory();
 
-    console.log("Recipes", recipes)
+    // console.log("Recipes", recipes)
 
     useEffect(() => {
         // IF SELECTOR DOESN'T WORK
@@ -25,6 +25,7 @@ export default function RecipesList() {
     return (
         <div className="RecipeList">
             <h1>Welcome to Mindful Menu App!</h1>
+        
             <div className="container">
                 {recipes.map(recipe => {
                     return (
@@ -40,7 +41,7 @@ export default function RecipesList() {
                         )
                     })}
             </div>
-            
+  
         </div>
     )
 }
