@@ -3,7 +3,7 @@ import { fetchRecipes } from '../store/recipes/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRecipes } from '../store/recipes/selectors';
 import { useHistory, Link } from "react-router-dom";
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 
 export default function RecipeCard() {
 
@@ -38,6 +38,7 @@ export default function RecipeCard() {
                             <Link to={`/recipes/${recipe.id}`}>
                             <Card.Title><strong>{recipe.title}</strong></Card.Title>
                             </Link>
+                            <Button className="plus-button plus-button--small" variant="primary" />
                         </Card.Body>
                         </Card>
                     </div>
