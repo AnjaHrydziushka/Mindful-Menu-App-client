@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Menu.css";
+import { useHistory } from "react-router-dom";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
+  const [home, setHome] = useState();
+  const history = useHistory();
+
+  const Home = () => {
+    const path = "/"
+    history.push(path)
+  }
 
   return (
     <>
       {open && <div className="FullscreenMenu">
-      <ul>
-            {["Home", "Breakfast", "Lunch", "Snack", "Dinner", "Login"].map((text, i) => {
+        <ul>
+            {[{displayName: "Home", path: "/"}, 
+            {displayName: "Breakfast", path: "/breakfast"}, 
+            {displayName: "Lunch", path: "/lunch"}, 
+            {displayName: "Snack", path: "/snack"}, 
+            {displayName: "Dinner", path: "/dinner"}, 
+            {displayName: "Login", path: "/login"}].map((item, i) => {
               return (
                 <li key={i} style={{ animationDelay: `${100 * i}ms` }}>
                   <a
@@ -17,9 +30,10 @@ export default function Menu() {
                     onClick={e => {
                       e.preventDefault();
                       setOpen(false);
+                      history.push(item.path)
                     }}
                   >
-                    {text}
+                   {item.displayName}
                   </a>
                 </li>
               );
