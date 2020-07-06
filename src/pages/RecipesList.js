@@ -3,7 +3,8 @@ import { fetchRecipes } from '../store/recipes/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRecipes } from '../store/recipes/selectors';
 import './RecipesStyle.scss';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
+import RecipeCard from '../components/RecipeCard';
 
 export default function RecipesList() {
 
@@ -25,23 +26,7 @@ export default function RecipesList() {
     return (
         <div className="RecipeList">
             <h1>Welcome to Mindful Menu App!</h1>
-        
-            <div className="container">
-                {recipes.map(recipe => {
-                    return (
-                        <div key={recipe.id} className="Recipe">
-                            <p><strong>{recipe.title}</strong></p>
-                            <img
-                                width="300"
-                                src={recipe.image}
-                                alt={`Recipe of "${recipe.title}"`}
-                                onClick={() => history.push(`recipes/${recipe.id}`)}
-                            />
-                        </div>
-                        )
-                    })}
-            </div>
-  
+            <RecipeCard />
         </div>
     )
 }
