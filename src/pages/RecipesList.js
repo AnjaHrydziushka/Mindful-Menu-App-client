@@ -11,7 +11,7 @@ export default function RecipesList() {
     const recipes = useSelector(selectRecipes);
     const history = useHistory();
 
-    console.log("Recipes", recipes)
+    // console.log("Recipes", recipes)
 
     useEffect(() => {
         // IF SELECTOR DOESN'T WORK

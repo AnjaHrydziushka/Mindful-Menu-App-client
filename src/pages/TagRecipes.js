@@ -13,7 +13,7 @@ export default function TagRecipes() {
     const recipesByTag = useSelector(selectRecipesByTag(tag));
     const history = useHistory();
 
-    console.log("Recipes by tag:", recipesByTag)
+    // console.log("Recipes by tag:", recipesByTag)
 
     useEffect(() => {
         if(recipesByTag.length === 0){

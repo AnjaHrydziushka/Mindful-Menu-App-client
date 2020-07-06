@@ -14,7 +14,7 @@ export default function OneRecipe() {
 
     const oneRecipe = useSelector(selectRecipeById(parsedId));
 
-    console.log("ONE RECIPE?", oneRecipe)
+    // console.log("ONE RECIPE?", oneRecipe)
 
     useEffect(() => {
         if(!oneRecipe){
