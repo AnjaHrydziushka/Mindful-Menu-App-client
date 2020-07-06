@@ -25,6 +25,7 @@ export default function RecipesList() {
     return (
         <div className="RecipeList">
             <h1>Welcome to Mindful Menu App!</h1>
+        
             <div className="container">
                 {recipes.map(recipe => {
                     return (
@@ -40,7 +41,7 @@ export default function RecipesList() {
                         )
                     })}
             </div>
-            
+  
         </div>
     )
 }

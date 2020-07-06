@@ -5,14 +5,8 @@ import { useHistory } from "react-router-dom";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
-  const [home, setHome] = useState();
   const history = useHistory();
-
-  const Home = () => {
-    const path = "/"
-    history.push(path)
-  }
-
+  
   return (
     <>
       {open && <div className="FullscreenMenu">
