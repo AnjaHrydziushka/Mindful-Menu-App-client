@@ -12,7 +12,6 @@ export default function MyMenu() {
     const history = useHistory();
 
     const removeRecipe = (id) => {
-        console.log("Removeing recipe id:", id)
         dispatch(removeFromMenu(id))
     }
 

@@ -30,7 +30,7 @@ export default function RecipeCard() {
             {recipes.map(recipe => {
                 return (
                     <div className="Recipe" key={recipe.id}>
-                        <Card  border="success" style={{ width: '16rem', margin: '1rem' }}>
+                        <Card  border="success" style={{ width: '18rem', margin: '1rem' }}>
                         <Card.Img
                             style={{ height: '240px', objectFit: 'cover' }}
                             variant="top"

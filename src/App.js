@@ -17,7 +17,7 @@ function App() {
         <Route path="/recipes/:id" component={OneRecipe} />
         <Route path="/:tag" component={TagRecipes} />
       </Switch>
-      <Menu />
+       <Menu />
     </div>
   );
 }
