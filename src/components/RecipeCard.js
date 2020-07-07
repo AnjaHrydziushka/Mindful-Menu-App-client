@@ -13,7 +13,6 @@ export default function RecipeCard() {
     const history = useHistory();
 
     const clickTheButton = (id) => {
-        console.log("Button:", id)
         dispatch(addToMenu(id))
     }
 
