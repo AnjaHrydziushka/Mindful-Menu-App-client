@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipes } from '../store/recipes/actions';
 import { selectRecipesByTag } from '../store/recipes/selectors';
 import { useHistory } from 'react-router-dom';
-import { Table } from 'react-bootstrap';
 
 export default function TagRecipes() {
 
