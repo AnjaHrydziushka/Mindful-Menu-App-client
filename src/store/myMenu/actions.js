@@ -5,10 +5,10 @@ export function addToMenu(id) {
   } 
 }
 
-export function removeFromMenu() {
+export function removeFromMenu(id) {
   console.log("Remove from cart action")
   return {
-    type: 'remove_from_menu'
+    type: 'remove_from_menu', payload: id
   } 
 }
 

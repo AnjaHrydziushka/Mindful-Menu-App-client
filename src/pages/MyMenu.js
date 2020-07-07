@@ -1,14 +1,20 @@
 import React, { useEffect } from 'react';
 import './RecipesStyle.scss';
-import { addToMenu } from '../store/myMenu/actions';
+import { addToMenu, removeFromMenu } from '../store/myMenu/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMyMenuRecipes } from '../store/myMenu/selectors';
 import { useHistory } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 export default function MyMenu() {
     const dispatch = useDispatch();
     const allRecipes = useSelector(getMyMenuRecipes);
     const history = useHistory();
+
+    const removeRecipe = (id) => {
+        console.log("Removeing recipe id:", id)
+        dispatch(removeFromMenu(id))
+    }
 
     useEffect(() => {
         if (allRecipes.length === 0) {
@@ -49,6 +55,7 @@ export default function MyMenu() {
                                 
                             </tbody>
                         </table>
+                        <Button onClick={() => removeRecipe(recipe.id)}>Remove</Button>
                    </div>
                )
            })}

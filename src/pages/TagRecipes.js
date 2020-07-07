@@ -12,8 +12,6 @@ export default function TagRecipes() {
     const recipesByTag = useSelector(selectRecipesByTag(tag));
     const history = useHistory();
 
-    // console.log("Recipes by tag:", recipesByTag)
-
     useEffect(() => {
         if(recipesByTag.length === 0){
             dispatch(fetchRecipes)
