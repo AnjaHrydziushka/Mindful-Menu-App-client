@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipes } from '../store/recipes/actions';
 import { selectRecipeById } from '../store/recipes/selectors';
-import { Table } from 'react-bootstrap';
 import './RecipesStyle.scss';
 
 export default function OneRecipe() {

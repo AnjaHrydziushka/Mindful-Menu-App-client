@@ -15,8 +15,7 @@ export default function Menu() {
             {displayName: "Breakfast", path: "/breakfast"}, 
             {displayName: "Lunch", path: "/lunch"}, 
             {displayName: "Snack", path: "/snack"}, 
-            {displayName: "Dinner", path: "/dinner"}, 
-            {displayName: "Login", path: "/login"}].map((item, i) => {
+            {displayName: "Dinner", path: "/dinner"}].map((item, i) => {
               return (
                 <li key={i} style={{ animationDelay: `${100 * i}ms` }}>
                   <a

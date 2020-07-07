@@ -6,12 +6,10 @@ import { useHistory, Link } from "react-router-dom";
 import { Card, Button } from 'react-bootstrap';
 
 export default function RecipeCard() {
-
+   
     const dispatch = useDispatch();
     const recipes = useSelector(selectRecipes);
     const history = useHistory();
-
-    console.log("Recipes", recipes)
 
     useEffect(() => {
         // IF SELECTOR DOESN'T WORK
@@ -26,10 +24,10 @@ export default function RecipeCard() {
         <div className="container">
             {recipes.map(recipe => {
                 return (
-                    <div className="Recipe">
-                        <Card key ={recipe.id} style={{ width: '16rem', margin: '1rem' }}>
+                    <div className="Recipe" key={recipe.id}>
+                        <Card  border="success" style={{ width: '16rem', margin: '1rem' }}>
                         <Card.Img
-                            style={{ height: '240px', width: '300px', objectFit: 'cover' }}
+                            style={{ height: '240px', objectFit: 'cover' }}
                             variant="top"
                             src={recipe.image}
                             onClick={() => history.push(`recipes/${recipe.id}`)}
@@ -38,7 +36,7 @@ export default function RecipeCard() {
                             <Link to={`/recipes/${recipe.id}`}>
                             <Card.Title><strong>{recipe.title}</strong></Card.Title>
                             </Link>
-                            <Button className="plus-button plus-button--small" variant="primary" />
+                            <Button>Add to Menu</Button>
                         </Card.Body>
                         </Card>
                     </div>

@@ -1,27 +1,22 @@
-import React, { useEffect } from 'react';
-import { fetchRecipes } from '../store/recipes/actions'
-import { useDispatch, useSelector } from 'react-redux';
-import { selectRecipes } from '../store/recipes/selectors';
+import React from 'react';
 import './RecipesStyle.scss';
-import { useHistory } from 'react-router-dom';
 import RecipeCard from '../components/RecipeCard';
 
 export default function RecipesList() {
 
-    const dispatch = useDispatch();
-    const recipes = useSelector(selectRecipes);
-    const history = useHistory();
+    // const dispatch = useDispatch();
+    // const recipes = useSelector(selectRecipes);
 
-    // console.log("Recipes", recipes)
+    // // console.log("Recipes", recipes)
 
-    useEffect(() => {
-        // IF SELECTOR DOESN'T WORK
-        if(recipes.length === 0){
-            dispatch(fetchRecipes)
-        }
-    }, [dispatch])
+    // useEffect(() => {
+    //     // IF SELECTOR DOESN'T WORK
+    //     if(recipes.length === 0){
+    //         dispatch(fetchRecipes)
+    //     }
+    // }, [dispatch])
 
-    if(!recipes) return <div>Loading...</div>
+    // if(!recipes) return <div>Loading...</div>
 
     return (
         <div className="RecipeList">
