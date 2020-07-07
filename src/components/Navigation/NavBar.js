@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, NavbarBrand }from 'react-bootstrap';
+import { Navbar }from 'react-bootstrap';
 
 export default function NavBar() {
     return (
