@@ -1,29 +1,33 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import './RecipesStyle.scss';
+import { addToMenu, removeFromMenu } from '../store/myMenu/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRecipes } from '../store/recipes/actions';
-import { selectRecipesByTag } from '../store/recipes/selectors';
+import { getMyMenuRecipes } from '../store/myMenu/selectors';
 import { useHistory } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
-export default function TagRecipes() {
-
-    const { tag } = useParams();
+export default function MyMenu() {
     const dispatch = useDispatch();
-    const recipesByTag = useSelector(selectRecipesByTag(tag));
+    const allRecipes = useSelector(getMyMenuRecipes);
     const history = useHistory();
 
-    useEffect(() => {
-        if(recipesByTag.length === 0){
-            dispatch(fetchRecipes)
-        }
-    },[dispatch])
+    const removeRecipe = (id) => {
+        console.log("Removeing recipe id:", id)
+        dispatch(removeFromMenu(id))
+    }
 
-    if (!recipesByTag) return <div>Loading...</div>
+    useEffect(() => {
+        if (allRecipes.length === 0) {
+            dispatch(addToMenu)
+        }
+    }, [dispatch])
+
+    if (!allRecipes) return <div>Loading...</div>
 
     return (
         <div className="RecipeList">
-           <h1><strong>{tag}</strong></h1>
-           {recipesByTag.map(recipe => {
+            <h3>My Menu</h3>
+            {allRecipes.map(recipe => {
                return (
                    <div key={recipe.id} className="Ingredients">
                        <img
@@ -51,6 +55,7 @@ export default function TagRecipes() {
                                 
                             </tbody>
                         </table>
+                        <Button onClick={() => removeRecipe(recipe.id)}>Remove</Button>
                    </div>
                )
            })}
