@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getMyMenuRecipes } from '../store/myMenu/selectors';
 import { useHistory, Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
+// import '../images/sadface.jpg';
 
 export default function MyMenu() {
     const dispatch = useDispatch();
@@ -25,9 +26,15 @@ export default function MyMenu() {
 
     return (
         <div className="RecipeList">
-            <h3 class="text-uppercase">My Menu</h3>
+            <h3 className="text-uppercase">My Menu</h3>
             <div className="container">
-            {allRecipes.map(recipe => {
+            {allRecipes.length === 0 ? (
+                <div className="EmptyMenu">
+                <h3 className="font-weight-lighter">You have added nothing to your menu yet</h3>
+                <img src="/images/sadface.jpg" alt="Sad face" width="300" />
+                </div>
+            ) : (
+            allRecipes.map(recipe => {
                return (
                    <div key={recipe.id} className="Recipe">
                        <Card border="success" style={{ width: '18rem', margin: '1rem'  }}>
@@ -42,7 +49,7 @@ export default function MyMenu() {
                             <Link to={`/recipes/${recipe.id}`}>
                                 <Card.Title><strong>{recipe.title}</strong></Card.Title>
                             </Link>
-                            <table class="table">
+                            <table className="table">
                             <tbody>
                                 {recipe.ingredients.map(product => {
                                     return (
@@ -56,7 +63,6 @@ export default function MyMenu() {
                                         </tr>
                                     )
                                 })}
-                                
                             </tbody>
                         </table>
                         <Button onClick={() => removeRecipe(recipe.id)}>Remove</Button>
@@ -65,7 +71,7 @@ export default function MyMenu() {
                        
                    </div>
                )
-           })}
+           }))}
           </div>
         </div>
     )

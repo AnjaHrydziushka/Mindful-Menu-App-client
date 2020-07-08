@@ -4,6 +4,15 @@
     width: 90%;
     margin: 0 auto;
 
+    .EmptyMenu {
+      width: 100%;
+      margin: 0 auto;
+
+      .font-weight-lighter {
+        padding: 2%;
+      }
+    }
+    
     .Body {
       padding: 1% 0 2% 0;
     }
@@ -64,6 +73,20 @@
 
       .container {
         padding: 0;
+      }
+
+      .EmptyMenu {
+        .font-weight-lighter {
+          padding: 5%;
+        }
+
+        img {
+          padding-top: 5%;
+        }
+      }
+
+      .text-uppercase {
+        padding-top: 10%;
       }
     
   }
