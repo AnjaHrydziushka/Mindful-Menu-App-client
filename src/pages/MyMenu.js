@@ -3,8 +3,8 @@ import './RecipesStyle.scss';
 import { addToMenu, removeFromMenu } from '../store/myMenu/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMyMenuRecipes } from '../store/myMenu/selectors';
-import { useHistory } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { useHistory, Link } from 'react-router-dom';
+import { Card, Button } from 'react-bootstrap';
 
 export default function MyMenu() {
     const dispatch = useDispatch();
@@ -25,19 +25,24 @@ export default function MyMenu() {
 
     return (
         <div className="RecipeList">
-            <h3>My Menu</h3>
+            <h3 class="text-uppercase">My Menu</h3>
+            <div className="container">
             {allRecipes.map(recipe => {
                return (
-                   <div key={recipe.id} className="Ingredients">
-                       <img
-                            width="300"
+                   <div key={recipe.id} className="Recipe">
+                       <Card border="success" style={{ width: '18rem', margin: '1rem'  }}>
+                        <Card.Img
+                            style={{ height: '240px', objectFit: 'cover' }}
+                            variant="top"
                             src={recipe.image}
                             alt={`Recipe of "${recipe.title}"`}
                             onClick={() => history.push(`recipes/${recipe.id}`)}
                         />
-                        <p><strong>{recipe.title}</strong></p>
-
-                        <table className="blueTable">
+                        <Card.Body>
+                            <Link to={`/recipes/${recipe.id}`}>
+                                <Card.Title><strong>{recipe.title}</strong></Card.Title>
+                            </Link>
+                            <table class="table">
                             <tbody>
                                 {recipe.ingredients.map(product => {
                                     return (
@@ -55,9 +60,13 @@ export default function MyMenu() {
                             </tbody>
                         </table>
                         <Button onClick={() => removeRecipe(recipe.id)}>Remove</Button>
+                        </Card.Body>
+                       </Card>
+                       
                    </div>
                )
            })}
+          </div>
         </div>
     )
 }

@@ -27,15 +27,16 @@ export default function OneRecipe() {
         <div className="RecipeList">
             <h1>{oneRecipe.title}</h1>
 
-            <div>
-            <img 
+            <div className="Body">
+            <img
+                className="RecipeImage"
                 width="300"
                 src={oneRecipe.image}
                 alt={`Recipe of "${oneRecipe.title}"`}
             />
-            <div className="Ingredients">
+            
             <h5>INGREDIENTS:</h5>
-                <table className="blueTable">
+                <table class="table">
                     <tbody>
                         {oneRecipe.ingredients.map(product => {
                             return (
@@ -52,11 +53,10 @@ export default function OneRecipe() {
                     </tbody>
                 </table>
             </div>
-                <div>
                     <h5>DESCRIPTION:</h5>
-                    <p>{oneRecipe.description}</p>
-                </div>
+                    <p className="Text">{oneRecipe.description}</p>
+                
             </div>
-        </div>
+       
     )
 }

@@ -28,12 +28,12 @@ export default function TagRecipes() {
 
     return (
         <div className="RecipeList">
-           <h1><strong>{tag}</strong></h1>
+           <h1 class="text-uppercase"><strong>{tag}</strong></h1>
            <div className="container">
            {recipesByTag.map(recipe => {
                return (
                    <div key={recipe.id} className="Recipe">
-                       <Card  border="success" style={{ width: '18rem', margin: '1rem' }}>
+                       <Card  border="success" style={{ width: '18rem', margin: '1rem'  }}>
                        <Card.Img
                             style={{ height: '240px', objectFit: 'cover' }}
                             variant="top"
