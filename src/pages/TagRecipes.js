@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipes } from '../store/recipes/actions';
@@ -6,6 +6,7 @@ import { selectRecipesByTag } from '../store/recipes/selectors';
 import { useHistory, Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import { addToMenu } from '../store/myMenu/actions';
+
 
 export default function TagRecipes() {
 
@@ -18,6 +19,14 @@ export default function TagRecipes() {
         dispatch(addToMenu(id))
     }
 
+    const button = {
+        backgroundColor: "lightskyblue", 
+        borderColor: "lightskyblue", 
+        color: "black"
+    }
+
+    const link = {color: "black"}
+
     useEffect(() => {
         if(recipesByTag.length === 0){
             dispatch(fetchRecipes)
@@ -28,24 +37,24 @@ export default function TagRecipes() {
 
     return (
         <div className="RecipeList">
-           <h1 class="text-uppercase"><strong>{tag}</strong></h1>
+           <h1 className="Tags"><strong>{tag}</strong></h1>
            <div className="container">
            {recipesByTag.map(recipe => {
                return (
                    <div key={recipe.id} className="Recipe">
-                       <Card  border="success" style={{ width: '18rem', margin: '1rem'  }}>
-                       <Card.Img
+                       <div class="card" style={{ width: '18rem', margin: '1rem', borderColor: "lightskyblue" }}>
+                       <img class="card-img-top"
                             style={{ height: '240px', objectFit: 'cover' }}
                             variant="top"
                             src={recipe.image}
                             alt={`Recipe of "${recipe.title}"`}
                             onClick={() => history.push(`recipes/${recipe.id}`)}
                         />
-                        <Card.Body>
-                            <Link to={`/recipes/${recipe.id}`}>
-                                <Card.Title><strong>{recipe.title}</strong></Card.Title>
-                            </Link>
-                        <table class="table">
+                        <div class="card-body">
+                            <a style={link} href={`/recipes/${recipe.id}`}>
+                                <h5 class="card-title"><strong>{recipe.title}</strong></h5>
+                            </a>
+                        <table className="table">
                             <tbody>
                                 {recipe.ingredients.map(product => {
                                     return (
@@ -62,9 +71,9 @@ export default function TagRecipes() {
                                 
                             </tbody>
                         </table>
-                        <Button onClick={() => clickTheButton(recipe.id)}>Add to Menu</Button>
-                            </Card.Body>
-                        </Card>
+                        <button class="btn btn-primary" style={button} onClick={() => clickTheButton(recipe.id)}>Add to menu</button>
+                            </div>
+                        </div>
                    </div>
                )
            })}
