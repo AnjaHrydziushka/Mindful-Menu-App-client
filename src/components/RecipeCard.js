@@ -37,18 +37,18 @@ export default function RecipeCard() {
             {recipes.map(recipe => {
                 return (
                     <div className="Recipe" key={recipe.id}>
-                        <div class="card" style={{ width: '18rem', margin: '1rem', borderColor: "lightskyblue" }}>
-                        <img class="card-img-top"
+                        <div className="card" style={{ width: '18rem', margin: '1rem', borderColor: "lightskyblue" }}>
+                        <img className="card-img-top"
                             style={{ height: '240px', objectFit: 'cover' }}
                             variant="top"
                             src={recipe.image}
                             onClick={() => history.push(`recipes/${recipe.id}`)}
                         />
-                        <div class="card-body">
+                        <div className="card-body">
                             <a style={link} href={`/recipes/${recipe.id}`}>
-                            <h5 class="card-title"><strong>{recipe.title}</strong></h5>
+                            <h5 className="card-title"><strong>{recipe.title}</strong></h5>
                             </a>
-                            <button class="btn btn-primary" style={button} onClick={() => clickTheButton(recipe.id)}>Add to Menu</button>
+                            <button className="btn btn-primary" style={button} onClick={() => clickTheButton(recipe.id)}>Add to Menu</button>
                         </div>
                         </div>
                     </div>

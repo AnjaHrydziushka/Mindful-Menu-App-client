@@ -41,17 +41,17 @@ export default function TagRecipes() {
            {recipesByTag.map(recipe => {
                return (
                    <div key={recipe.id} className="Recipe">
-                       <div class="card" style={{ width: '18rem', margin: '1rem', borderColor: "lightskyblue" }}>
-                       <img class="card-img-top"
+                       <div className="card" style={{ width: '18rem', margin: '1rem', borderColor: "lightskyblue" }}>
+                       <img className="card-img-top"
                             style={{ height: '240px', objectFit: 'cover' }}
                             variant="top"
                             src={recipe.image}
                             alt={`Recipe of "${recipe.title}"`}
                             onClick={() => history.push(`recipes/${recipe.id}`)}
                         />
-                        <div class="card-body">
+                        <div className="card-body">
                             <a style={link} href={`/recipes/${recipe.id}`}>
-                                <h5 class="card-title"><strong>{recipe.title}</strong></h5>
+                                <h5 className="card-title"><strong>{recipe.title}</strong></h5>
                             </a>
                         <table className="table">
                             <tbody>
@@ -69,7 +69,7 @@ export default function TagRecipes() {
                                 })}
                             </tbody>
                         </table>
-                    <button class="btn btn-primary" style={button} onClick={() => clickTheButton(recipe.id)}>Add to menu</button>
+                    <button className="btn btn-primary" style={button} onClick={() => clickTheButton(recipe.id)}>Add to menu</button>
                             </div>
                         </div>
                    </div>

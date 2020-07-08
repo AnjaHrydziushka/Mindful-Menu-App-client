@@ -42,17 +42,17 @@ export default function MyMenu() {
             allRecipes.map(recipe => {
                return (
                    <div key={recipe.id} className="Recipe">
-                       <div class="card mb-3">
+                       <div className="card mb-3">
                             <img 
-                                class="card-img-top"
+                                className="card-img-top"
                                 style={{ height: '240px', objectFit: 'cover' }}
                                 src={recipe.image}
                                 alt={`Recipe of "${recipe.title}"`}
                                 onClick={() => history.push(`recipes/${recipe.id}`)}
                             />
-                            <div class="card-body">
+                            <div className="card-body">
                                 <a style={link} href={`/recipes/${recipe.id}`}>
-                                    <h5 class="card-title"><strong>{recipe.title}</strong></h5>
+                                    <h5 className="card-title"><strong>{recipe.title}</strong></h5>
                                 </a>
                                 <table className="table">
                                 <tbody>
@@ -70,7 +70,7 @@ export default function MyMenu() {
                                     })}
                                 </tbody>
                                 </table>
-                                    <button class="btn btn-primary" style={button} onClick={() => removeRecipe(recipe.id)}>Remove</button>
+                                    <button className="btn btn-primary" style={button} onClick={() => removeRecipe(recipe.id)}>Remove</button>
                             </div>
                        </div>  
                    </div>

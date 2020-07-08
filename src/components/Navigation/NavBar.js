@@ -8,9 +8,9 @@ export default function NavBar() {
 
     return (
         <div>
-            <nav class="navbar navbar-light" style={navbar}>
+            <nav className="navbar navbar-light" style={navbar}>
                 <a 
-                class="navbar-brand" 
+                className="navbar-brand" 
                 onClick={() => history.push('/')}>
                     Mindful Menu
                 </a>

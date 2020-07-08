@@ -59,7 +59,7 @@ export default function OneRecipe() {
                             })}
                         </tbody>
                     </table>
-                <button class="btn btn-primary" style={button} onClick={() => clickTheButton(oneRecipe.id)}>Add to menu</button>
+                <button className="btn btn-primary" style={button} onClick={() => clickTheButton(oneRecipe.id)}>Add to menu</button>
             </div>
             <h5>DESCRIPTION:</h5>
                 <p className="Text">{oneRecipe.description}</p>
