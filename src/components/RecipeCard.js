@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { fetchRecipes } from '../store/recipes/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRecipes } from '../store/recipes/selectors';
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Card } from 'react-bootstrap';
 import { addToMenu } from '../store/myMenu/actions';
 
@@ -25,7 +25,6 @@ export default function RecipeCard() {
     const link = {color: "black"}
 
     useEffect(() => {
-        // IF SELECTOR DOESN'T WORK
         if(recipes.length === 0){
             dispatch(fetchRecipes)
         }

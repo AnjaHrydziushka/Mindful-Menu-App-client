@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-import './RecipesStyle.scss';
 import { addToMenu, removeFromMenu } from '../store/myMenu/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMyMenuRecipes } from '../store/myMenu/selectors';
-import { useHistory, Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
-// import '../images/sadface.jpg';
+import { useHistory } from 'react-router-dom';
 
 export default function MyMenu() {
     const dispatch = useDispatch();
@@ -46,37 +43,36 @@ export default function MyMenu() {
                return (
                    <div key={recipe.id} className="Recipe">
                        <div class="card mb-3">
-                        <img 
-                            class="card-img-top"
-                            style={{ height: '240px', objectFit: 'cover' }}
-                            src={recipe.image}
-                            alt={`Recipe of "${recipe.title}"`}
-                            onClick={() => history.push(`recipes/${recipe.id}`)}
-                        />
-                        <div class="card-body">
-                            <a style={link} href={`/recipes/${recipe.id}`}>
-                                <h5 class="card-title"><strong>{recipe.title}</strong></h5>
-                            </a>
-                            <table className="table">
-                            <tbody>
-                                {recipe.ingredients.map(product => {
-                                    return (
-                                        <tr key={product.id}>
-                                            <td>{product.name}</td>
-                                            {product.quantities.map(qty => {
-                                                return (
-                                                    <td key={qty.id}>{qty.amount} {product.unit}</td>
-                                                )
-                                            })}
-                                        </tr>
-                                    )
-                                })}
-                            </tbody>
-                        </table>
-                        <button class="btn btn-primary" style={button} onClick={() => removeRecipe(recipe.id)}>Remove</button>
-                        </div>
-                       </div>
-                       
+                            <img 
+                                class="card-img-top"
+                                style={{ height: '240px', objectFit: 'cover' }}
+                                src={recipe.image}
+                                alt={`Recipe of "${recipe.title}"`}
+                                onClick={() => history.push(`recipes/${recipe.id}`)}
+                            />
+                            <div class="card-body">
+                                <a style={link} href={`/recipes/${recipe.id}`}>
+                                    <h5 class="card-title"><strong>{recipe.title}</strong></h5>
+                                </a>
+                                <table className="table">
+                                <tbody>
+                                    {recipe.ingredients.map(product => {
+                                        return (
+                                            <tr key={product.id}>
+                                                <td>{product.name}</td>
+                                                {product.quantities.map(qty => {
+                                                    return (
+                                                        <td key={qty.id}>{qty.amount} {product.unit}</td>
+                                                    )
+                                                })}
+                                            </tr>
+                                        )
+                                    })}
+                                </tbody>
+                                </table>
+                                    <button class="btn btn-primary" style={button} onClick={() => removeRecipe(recipe.id)}>Remove</button>
+                            </div>
+                       </div>  
                    </div>
                )
            }))}

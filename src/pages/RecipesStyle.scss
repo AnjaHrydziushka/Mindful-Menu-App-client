@@ -38,6 +38,7 @@
     h5 {
       padding: 2% 0 2% 0;
     }
+
     .container {
         display: flex;
         flex-direction: row;
@@ -50,11 +51,11 @@
       justify-content: center;
     }
 
-        .Recipe {
-            flex-direction: column;
+    .Recipe {
+      flex-direction: column;
             
-        }
     }
+  }
 }
 
 @media all and (max-width: 700px) {
@@ -65,8 +66,7 @@
     padding: 0;
     background-color: white;
     
-
-      .RecipeImage {
+    .RecipeImage {
       width: 90%;
       box-shadow: none;
       }
@@ -104,6 +104,5 @@
       h1 {
         padding-top: 5%;
       }
-    
   }
 }

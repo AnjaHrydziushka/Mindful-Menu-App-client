@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipes } from '../store/recipes/actions';
 import { selectRecipesByTag } from '../store/recipes/selectors';
 import { useHistory, Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
 import { addToMenu } from '../store/myMenu/actions';
 
 
@@ -68,10 +67,9 @@ export default function TagRecipes() {
                                         </tr>
                                     )
                                 })}
-                                
                             </tbody>
                         </table>
-                        <button class="btn btn-primary" style={button} onClick={() => clickTheButton(recipe.id)}>Add to menu</button>
+                    <button class="btn btn-primary" style={button} onClick={() => clickTheButton(recipe.id)}>Add to menu</button>
                             </div>
                         </div>
                    </div>
