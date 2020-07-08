@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipes } from '../store/recipes/actions';
 import { selectRecipeById } from '../store/recipes/selectors';
 import './RecipesStyle.scss';
+import { addToMenu } from '../store/myMenu/actions';
+import { Button } from 'react-bootstrap';
 
 export default function OneRecipe() {
     
     const { id } = useParams();
     const parsedId = parseInt(id);
     const dispatch = useDispatch();
+    const [text, setText] = useState("Add to menu")
+
+    const clickTheButton = (id) => {
+        dispatch(addToMenu(id))
+        
+    }
 
     const oneRecipe = useSelector(selectRecipeById(parsedId));
 
@@ -36,7 +44,7 @@ export default function OneRecipe() {
             />
             
             <h5>INGREDIENTS:</h5>
-                <table class="table">
+                <table className="table">
                     <tbody>
                         {oneRecipe.ingredients.map(product => {
                             return (
@@ -52,6 +60,7 @@ export default function OneRecipe() {
                         })}
                     </tbody>
                 </table>
+                <Button onClick={() => clickTheButton(oneRecipe.id)}>{text}</Button>
             </div>
                     <h5>DESCRIPTION:</h5>
                     <p className="Text">{oneRecipe.description}</p>
