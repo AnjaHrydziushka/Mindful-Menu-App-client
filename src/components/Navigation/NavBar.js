@@ -1,7 +1,5 @@
 import React from 'react';
-import { Navbar }from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import './Menu.css'
 
 export default function NavBar() {
     const history = useHistory();

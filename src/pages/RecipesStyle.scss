@@ -2,7 +2,7 @@
     text-align: center;
     padding: 3% 3% 3% 3%;
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
 
     .EmptyMenu {
       width: 100%;
@@ -43,8 +43,13 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    
+    .MenuContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-        
         .Recipe {
             flex-direction: column;
             
@@ -53,10 +58,13 @@
 }
 
 @media all and (max-width: 700px) {
+
   .RecipeList {
     width: 90%;
     margin: auto;
     padding: 0;
+    background-color: white;
+    
 
       .RecipeImage {
       width: 90%;
@@ -87,6 +95,14 @@
 
       .text-uppercase {
         padding-top: 10%;
+      }
+
+      .Tags {
+        padding-top: 5%;
+      }
+
+      h1 {
+        padding-top: 5%;
       }
     
   }

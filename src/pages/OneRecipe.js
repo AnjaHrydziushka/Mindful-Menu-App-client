@@ -16,7 +16,12 @@ export default function OneRecipe() {
 
     const clickTheButton = (id) => {
         dispatch(addToMenu(id))
-        
+    }
+
+    const button = {
+        backgroundColor: "lightskyblue", 
+        borderColor: "lightskyblue", 
+        color: "black"
     }
 
     const oneRecipe = useSelector(selectRecipeById(parsedId));
@@ -33,7 +38,7 @@ export default function OneRecipe() {
 
     return (
         <div className="RecipeList">
-            <h1>{oneRecipe.title}</h1>
+            <h1 className="Tags">{oneRecipe.title}</h1>
 
             <div className="Body">
             <img
@@ -60,7 +65,7 @@ export default function OneRecipe() {
                         })}
                     </tbody>
                 </table>
-                <Button onClick={() => clickTheButton(oneRecipe.id)}>{text}</Button>
+                <button class="btn btn-primary" style={button} onClick={() => clickTheButton(oneRecipe.id)}>{text}</button>
             </div>
                     <h5>DESCRIPTION:</h5>
                     <p className="Text">{oneRecipe.description}</p>

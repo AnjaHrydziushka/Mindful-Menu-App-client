@@ -16,6 +16,14 @@ export default function MyMenu() {
         dispatch(removeFromMenu(id))
     }
 
+    const button = {
+        backgroundColor: "lightsalmon", 
+        borderColor: "lightsalmon", 
+        color: "black"
+    }
+
+    const link = {color: "black"}
+
     useEffect(() => {
         if (allRecipes.length === 0) {
             dispatch(addToMenu)
@@ -27,7 +35,7 @@ export default function MyMenu() {
     return (
         <div className="RecipeList">
             <h3 className="text-uppercase">My Menu</h3>
-            <div className="container">
+            <div className="MenuContainer">
             {allRecipes.length === 0 ? (
                 <div className="EmptyMenu">
                 <h3 className="font-weight-lighter">You have added nothing to your menu yet</h3>
@@ -37,18 +45,18 @@ export default function MyMenu() {
             allRecipes.map(recipe => {
                return (
                    <div key={recipe.id} className="Recipe">
-                       <Card border="success" style={{ width: '18rem', margin: '1rem'  }}>
-                        <Card.Img
+                       <div class="card mb-3">
+                        <img 
+                            class="card-img-top"
                             style={{ height: '240px', objectFit: 'cover' }}
-                            variant="top"
                             src={recipe.image}
                             alt={`Recipe of "${recipe.title}"`}
                             onClick={() => history.push(`recipes/${recipe.id}`)}
                         />
-                        <Card.Body>
-                            <Link to={`/recipes/${recipe.id}`}>
-                                <Card.Title><strong>{recipe.title}</strong></Card.Title>
-                            </Link>
+                        <div class="card-body">
+                            <a style={link} href={`/recipes/${recipe.id}`}>
+                                <h5 class="card-title"><strong>{recipe.title}</strong></h5>
+                            </a>
                             <table className="table">
                             <tbody>
                                 {recipe.ingredients.map(product => {
@@ -65,9 +73,9 @@ export default function MyMenu() {
                                 })}
                             </tbody>
                         </table>
-                        <Button onClick={() => removeRecipe(recipe.id)}>Remove</Button>
-                        </Card.Body>
-                       </Card>
+                        <button class="btn btn-primary" style={button} onClick={() => removeRecipe(recipe.id)}>Remove</button>
+                        </div>
+                       </div>
                        
                    </div>
                )
