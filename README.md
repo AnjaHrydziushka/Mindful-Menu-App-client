@@ -26,7 +26,7 @@ Mindfull Menu App is a React progressive web app. What does it mean? This is an 
 
 ## <a name="Demo"></a> Demo
 
-![**Desktop use**](https://giphy.com/gifs/W1Z64LpoQaDu9AbiiI)
+![**Desktop use**](https://media.giphy.com/media/W1Z64LpoQaDu9AbiiI/giphy.gif)
 
 
 ## <a name="Goals"></a> Goals
