@@ -1,14 +1,18 @@
 # Mindful Menu App 
 
+:point_right: Click [HERE](https://eager-mccarthy-776004.netlify.app/) to check out the deployed version.
+
 ## Introduction
 
-Hello! Hi! I am Anja, and this is my portfolio project - progressive web application called 'Mindful Menu App'. Please notice, this is MVP, not a final version. I'm already working on other cool features I want to implement to this app! Stay tuned! :wink:
+Hello! I am Anja, and this is my portfolio project - React progressive web application called 'Mindful Menu App'. Please notice, this is MVP, not a final version. I'm already working on other cool features I want to implement to this app. Stay tuned! :wink:
 
 ## About the app
 
 Mindfull Menu App is dedicated to those people who want to eat healthy, but don't want to spend a lot of time cooking. The app contains simple, tasty and easy-to-make recipes for every day and any skill level. As a user of Mindful Menu App, you can create your own menu and not to be struggling every day with a question "what shall I eat today?".
 
-This project was bootstrapped with Create React App.
+**Progressive web app**
+
+Mindfull Menu App is a React progressive web app. What does it mean? This is an app built from the web technologies like HTML, CSS, and JavaScript, but with a feel and functionality that rivals an actual native app. That means once you get the URL of this app, you can save it to your computer or smartphone and use it right from the desktop/home screen! Pretty cool, isn't it? :dancer:
 
 ## Table of contents
 
@@ -18,7 +22,7 @@ This project was bootstrapped with Create React App.
 + [User storie, Wireframe amd Datamodel](#Story)
 + [Git Workflow](#Git)
 + [Server repo](Server)
-+ [How to install the app](#Install)
++ [How to install and use the app](#Install)
 
 ## <a name="Demo"></a> Demo
 
@@ -31,10 +35,9 @@ Also my goals were:
 * Showcase development approach of using wireframes and user stories;
 * Practice disciplined git usage like proper commits & branching.
 
-
 ## <a name="Technologies"></a> Technologies
 
-**Front End:
+**Front End:**
 
 * Node.js
 * React
@@ -44,7 +47,7 @@ Also my goals were:
 * Sass
 * Framer Motion
 
-**Back End:
+**Back End:**
 
 * Express
 * Cors
@@ -62,78 +65,31 @@ User stories and my plans for an app extention can be found [HERE](https://githu
 
 In this project I tried to use:
 
-* Clear commit messages
-* Separate branches for each new feature
-* Pull requests with short descriptions
+* Clear commit messages;
+* Separate branches for each new feature;
+* Pull requests with short descriptions.
+
+Here :point_down: are some pull requests I made:
+
+[feat-recipes-componen](https://github.com/AnjaHrydziushka/Mindful-Menu-App-client/pull/1)
+[feat-recipe-models](https://github.com/AnjaHrydziushka/Mindful-Menu-server/pull/1)
 
 ## <a name="Server"></a> Server repo
 
-## <a name="Install"></a> How to install the app
+The server side of this project is an Express server connected to a Sequelize database. You will find it [HERE](https://github.com/AnjaHrydziushka/Mindful-Menu-server).
 
+## <a name="Install"></a> How to install and use the app
 
-## Available Scripts
+* clone the app
+* cd into your project
+* install dependencies with `npm install`
+* do the same with a [server repo](https://github.com/AnjaHrydziushka/Mindful-Menu-server)
+* start server with `nodemon index.js`
+* start the app with `npm start`
 
-In the project directory, you can run:
+**How to use the app on your desktop or smartphone home screen:**
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* get the link of the deployed version [HERE](https://eager-mccarthy-776004.netlify.app/)
+* open the link in a browser and open its settings menu
+* click "Install Mindful Menu App" (depending on your device and browser, it can be "Add to Home Screen" or something similar)
+* you will see the app icon on your desktop/home screen, it will open as a normal app!
