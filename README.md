@@ -12,13 +12,13 @@ This project was bootstrapped with Create React App.
 
 ## Table of contents
 
-+ [Demo] (#Demo)
-+ [Goals] (#Goals)
-+ [Technologies] (#Technologies)
-+ [User storie, Wireframe amd Datamodel] (#Story)
-+ [Git Workflow] (#Git)
-+ [Server repo] (Server)
-+ [How to install the app] (#Install)
++ [Demo](#Demo)
++ [Goals](#Goals)
++ [Technologies](#Technologies)
++ [User storie, Wireframe amd Datamodel](#Story)
++ [Git Workflow](#Git)
++ [Server repo](Server)
++ [How to install the app](#Install)
 
 ## <a name="Demo"></a> Demo
 
