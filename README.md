@@ -26,6 +26,9 @@ Mindfull Menu App is a React progressive web app. What does it mean? This is an 
 
 ## <a name="Demo"></a> Demo
 
+![**Desktop use**](https://giphy.com/gifs/W1Z64LpoQaDu9AbiiI)
+
+
 ## <a name="Goals"></a> Goals
 
 My main goal for this project was to build a full-stack app using the technologies learned in the Codaisseur bootcamp. I also wanted implement a few new skills, like building a progressive web app with React.
