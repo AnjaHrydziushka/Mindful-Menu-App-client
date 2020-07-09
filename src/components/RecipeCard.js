@@ -3,7 +3,6 @@ import { fetchRecipes } from '../store/recipes/actions'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectRecipes } from '../store/recipes/selectors';
 import { useHistory } from "react-router-dom";
-import { Card } from 'react-bootstrap';
 import { addToMenu } from '../store/myMenu/actions';
 
 export default function RecipeCard() {
