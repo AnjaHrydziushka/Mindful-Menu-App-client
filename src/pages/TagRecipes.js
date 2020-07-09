@@ -3,9 +3,8 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipes } from '../store/recipes/actions';
 import { selectRecipesByTag } from '../store/recipes/selectors';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { addToMenu } from '../store/myMenu/actions';
-
 
 export default function TagRecipes() {
 
