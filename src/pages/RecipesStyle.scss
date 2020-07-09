@@ -1,0 +1,108 @@
+.RecipeList {
+    text-align: center;
+    padding: 3% 3% 3% 3%;
+    width: 90%;
+    margin: auto;
+
+    .EmptyMenu {
+      width: 100%;
+      margin: 0 auto;
+
+      .font-weight-lighter {
+        padding: 2%;
+      }
+    }
+    
+    .Body {
+      padding: 1% 0 2% 0;
+    }
+    
+    .Tags {
+      text-transform: uppercase;
+    }
+
+    .Ingredients {
+        text-align: center;
+    }
+
+    .Text {
+      text-align: center;
+    }
+    .RecipeImage {
+      width: 70%;
+      position: relative;
+      margin: 3%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    h5 {
+      padding: 2% 0 2% 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+    .MenuContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .Recipe {
+      flex-direction: column;
+            
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+
+  .RecipeList {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    background-color: white;
+    
+    .RecipeImage {
+      width: 90%;
+      box-shadow: none;
+      }
+
+      .Text {
+        text-align: justify;
+      }
+      
+      .Body {
+        border: 1px solid green;
+      }
+
+      .container {
+        padding: 0;
+      }
+
+      .EmptyMenu {
+        .font-weight-lighter {
+          padding: 5%;
+        }
+
+        img {
+          padding-top: 5%;
+        }
+      }
+
+      .text-uppercase {
+        padding-top: 10%;
+      }
+
+      .Tags {
+        padding-top: 5%;
+      }
+
+      h1 {
+        padding-top: 5%;
+      }
+  }
+}
