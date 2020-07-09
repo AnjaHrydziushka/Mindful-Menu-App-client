@@ -24,11 +24,47 @@ This project was bootstrapped with Create React App.
 
 ## <a name="Goals"></a> Goals
 
+My main goal for this project was to build a full-stack app using the technologies learned in the Codaisseur bootcamp. I also wanted implement a few new skills, like building a progressive web app with React.
+
+Also my goals were:
+
+* Showcase development approach of using wireframes and user stories;
+* Practice disciplined git usage like proper commits & branching.
+
+
 ## <a name="Technologies"></a> Technologies
 
-## <a name="Story"></a> User storie, Wireframe amd Datamodel
+**Front End:
+
+* Node.js
+* React
+* Redux
+* Axios
+* Bootstrap
+* Sass
+* Framer Motion
+
+**Back End:
+
+* Express
+* Cors
+* REST
+* Sequelize
+* Postgres
+
+## <a name="Story"></a> User stories, Wireframe amd Datamodel
+
+The [wireframe](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/fileexport/Export_Db790fc09326e584845c3111cf065040d.pdf) and [datamodel](https://app.lucidchart.com/invitations/accept/67d6ec63-a882-4ed9-8451-e9b538320e08) I used for my project.
+
+User stories and my plans for an app extention can be found [HERE](https://github.com/AnjaHrydziushka/Mindful-Menu-App-client/projects/1).
 
 ## <a name="Git"></a> Git Workflow
+
+In this project I tried to use:
+
+* Clear commit messages
+* Separate branches for each new feature
+* Pull requests with short descriptions
 
 ## <a name="Server"></a> Server repo
 
