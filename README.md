@@ -1,68 +1,103 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mindful Menu App 
 
-## Available Scripts
+:point_right: Click [HERE](https://eager-mccarthy-776004.netlify.app/) to check out the deployed version.
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+Hello! I am Anja, and this is my portfolio project - React progressive web application called 'Mindful Menu App'. Please notice, this is MVP, not a final version. I'm already working on other cool features I want to implement to this app. Stay tuned! :wink:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About the app
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Mindfull Menu App is dedicated to those people who want to eat healthy, but don't want to spend a lot of time cooking. The app contains simple, tasty and easy-to-make recipes for every day and any skill level. As a user of Mindful Menu App, you can create your own menu and not to ask yourself every day a question "what shall I eat today?".
 
-### `npm test`
+**Progressive web app**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Mindfull Menu App is a React progressive web app. What does it mean? This is an app built from the web technologies like HTML, CSS, and JavaScript, but with a feel and functionality that rivals an actual native app. That means once you get the URL of this app, you can save it to your computer or smartphone and use it right from the desktop/home screen! Pretty cool, isn't it? :dancer:
 
-### `npm run build`
+## Table of contents
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
++ [Demo](#Demo)
++ [Goals](#Goals)
++ [Technologies](#Technologies)
++ [User storie, Wireframe amd Datamodel](#Story)
++ [Git Workflow](#Git)
++ [Server repo](Server)
++ [How to install and use the app](#Install)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## <a name="Demo"></a> Demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Desktop**
 
-### `npm run eject`
+<img src="https://media.giphy.com/media/W1Z64LpoQaDu9AbiiI/giphy.gif" width="80%" />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Smartphone Homescreen**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://media.giphy.com/media/dyRSwt9oJasfEn5Idg/giphy.gif" width="30%" />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## <a name="Goals"></a> Goals
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+My main goal for this project was to build a full-stack app using the technologies learned in the Codaisseur bootcamp. I also wanted implement a few new skills, like building a progressive web app with React.
 
-## Learn More
+Also my goals were:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Showcase development approach of using wireframes and user stories;
+* Practice disciplined git usage like proper commits & branching.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## <a name="Technologies"></a> Technologies
 
-### Code Splitting
+**Front End:**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* Node.js
+* React
+* Redux
+* Axios
+* Bootstrap
+* Sass
+* Framer Motion
 
-### Analyzing the Bundle Size
+**Back End:**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* Express
+* Cors
+* REST
+* Sequelize
+* Postgres
 
-### Making a Progressive Web App
+## <a name="Story"></a> User stories, Wireframe amd Datamodel
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+The [wireframe](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/fileexport/Export_Db790fc09326e584845c3111cf065040d.pdf) and [datamodel](https://app.lucidchart.com/invitations/accept/67d6ec63-a882-4ed9-8451-e9b538320e08) I used for my project.
 
-### Advanced Configuration
+User stories and my plans for an app extention can be found [HERE](https://github.com/AnjaHrydziushka/Mindful-Menu-App-client/projects/1).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## <a name="Git"></a> Git Workflow
 
-### Deployment
+In this project I tried to use:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+* Clear commit messages;
+* Separate branches for each new feature;
+* Pull requests with short descriptions.
 
-### `npm run build` fails to minify
+Here :point_down: are some pull requests I made:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[feat-recipes-componen](https://github.com/AnjaHrydziushka/Mindful-Menu-App-client/pull/1)
+[feat-recipe-models](https://github.com/AnjaHrydziushka/Mindful-Menu-server/pull/1)
+
+## <a name="Server"></a> Server repo
+
+The server side of this project is an Express server connected to a Sequelize database. You will find it [HERE](https://github.com/AnjaHrydziushka/Mindful-Menu-server).
+
+## <a name="Install"></a> How to install and use the app
+
+* clone the app
+* cd into your project
+* install dependencies with `npm install`
+* do the same with a [server repo](https://github.com/AnjaHrydziushka/Mindful-Menu-server)
+* start server with `nodemon index.js`
+* start the app with `npm start`
+
+**How to use the app on your desktop or smartphone home screen:**
+
+* get the link of the deployed version [HERE](https://eager-mccarthy-776004.netlify.app/)
+* open the link in a browser and open its settings menu
+* click "Install Mindful Menu App" (depending on your device and browser, it can be "Add to Home Screen" or something similar)
+* you will see the app icon on your desktop/home screen, it will open as a normal app!

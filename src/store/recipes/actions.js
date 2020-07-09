@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API_URL } from '../../config/constants';
 
 function fetchRecipesSuccess(data) {
     return {
@@ -7,6 +8,6 @@ function fetchRecipesSuccess(data) {
 }
 
 export async function fetchRecipes(dispatch, getState) {
-    const response = await axios.get(`http://localhost:4000/`)
+    const response = await axios.get(`${API_URL}`)
     dispatch(fetchRecipesSuccess(response.data))
 }
