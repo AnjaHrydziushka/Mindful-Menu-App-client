@@ -1,12 +1,20 @@
 import React from 'react';
-import { Navbar }from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 export default function NavBar() {
+
+    const history = useHistory();
+    const navbar = {backgroundColor: "lightskyblue"}
+
     return (
         <div>
-            <Navbar bg="light">
-                <Navbar.Brand href="/">Mindful App</Navbar.Brand>
-            </Navbar>
+            <nav className="navbar navbar-light" style={navbar}>
+                <a 
+                className="navbar-brand" 
+                onClick={() => history.push('/')}>
+                    Mindful Menu
+                </a>
+            </nav>
         </div>
     )
 }

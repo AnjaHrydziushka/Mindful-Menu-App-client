@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRecipes } from '../store/recipes/actions';
 import { selectRecipeById } from '../store/recipes/selectors';
-import './RecipesStyle.scss';
+import { addToMenu } from '../store/myMenu/actions';
 
 export default function OneRecipe() {
     
@@ -11,9 +11,17 @@ export default function OneRecipe() {
     const parsedId = parseInt(id);
     const dispatch = useDispatch();
 
-    const oneRecipe = useSelector(selectRecipeById(parsedId));
+    const clickTheButton = (id) => {
+        dispatch(addToMenu(id))
+    }
 
-    // console.log("ONE RECIPE?", oneRecipe)
+    const button = {
+        backgroundColor: "lightskyblue", 
+        borderColor: "lightskyblue", 
+        color: "black"
+    }
+
+    const oneRecipe = useSelector(selectRecipeById(parsedId));
 
     useEffect(() => {
         if(!oneRecipe){
@@ -25,38 +33,36 @@ export default function OneRecipe() {
 
     return (
         <div className="RecipeList">
-            <h1>{oneRecipe.title}</h1>
+            <h1 className="Tags">{oneRecipe.title}</h1>
 
-            <div>
-            <img 
-                width="300"
-                src={oneRecipe.image}
-                alt={`Recipe of "${oneRecipe.title}"`}
-            />
-            <div className="Ingredients">
-            <h5>INGREDIENTS:</h5>
-                <table className="blueTable">
-                    <tbody>
-                        {oneRecipe.ingredients.map(product => {
-                            return (
-                                <tr key={product.id}>
-                                    <td>{product.name}</td>
-                                    {product.quantities.map(one => {
-                                        return (
-                                            <td key={one.id}>{one.amount} {product.unit}</td>
-                                        )
-                                    })}
-                                </tr>
-                            )
-                        })}
-                    </tbody>
-                </table>
+            <div className="Body">
+                <img
+                    className="RecipeImage"
+                    width="300"
+                    src={oneRecipe.image}
+                    alt={`Recipe of "${oneRecipe.title}"`}
+                />
+                <h5>INGREDIENTS:</h5>
+                    <table className="table">
+                        <tbody>
+                            {oneRecipe.ingredients.map(product => {
+                                return (
+                                    <tr key={product.id}>
+                                        <td>{product.name}</td>
+                                        {product.quantities.map(one => {
+                                            return (
+                                                <td key={one.id}>{one.amount} {product.unit}</td>
+                                            )
+                                        })}
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                <button className="btn btn-primary" style={button} onClick={() => clickTheButton(oneRecipe.id)}>Add to menu</button>
             </div>
-                <div>
-                    <h5>DESCRIPTION:</h5>
-                    <p>{oneRecipe.description}</p>
-                </div>
+            <h5>DESCRIPTION:</h5>
+                <p className="Text">{oneRecipe.description}</p>
             </div>
-        </div>
     )
 }
