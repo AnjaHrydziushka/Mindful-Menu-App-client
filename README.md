@@ -8,7 +8,7 @@ Hello! I am Anja, and this is my portfolio project - React progressive web appli
 
 ## About the app
 
-Mindfull Menu App is dedicated to those people who want to eat healthy, but don't want to spend a lot of time cooking. The app contains simple, tasty and easy-to-make recipes for every day and any skill level. As a user of Mindful Menu App, you can create your own menu and not to be struggling every day with a question "what shall I eat today?".
+Mindfull Menu App is dedicated to those people who want to eat healthy, but don't want to spend a lot of time cooking. The app contains simple, tasty and easy-to-make recipes for every day and any skill level. As a user of Mindful Menu App, you can create your own menu and not to ask yourself every day a question "what shall I eat today?".
 
 **Progressive web app**
 
