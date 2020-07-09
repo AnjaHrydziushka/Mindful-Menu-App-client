@@ -1,5 +1,40 @@
 # Mindful Menu App 
 
+## Introduction
+
+Hello! Hi! I am Anja, and this is my portfolio project - progressive web application called 'Mindful Menu App'. Please notice, this is MVP, not a final version. I'm already working on other cool features I want to implement to this app! Stay tuned! :wink:
+
+## About the app
+
+Mindfull Menu App is dedicated to those people who want to eat healthy, but don't want to spend a lot of time cooking. The app contains simple, tasty and easy-to-make recipes for every day and any skill level. As a user of Mindful Menu App, you can create your own menu and not to be struggling every day with a question "what shall I eat today?".
+
+This project was bootstrapped with Create React App.
+
+## Table of contents
+
++ [Demo] (#Demo)
++ [Goals] (#Goals)
++ [Technologies] (#Technologies)
++ [User storie, Wireframe amd Datamodel] (#Story)
++ [Git Workflow] (#Git)
++ [Server repo] (Server)
++ [How to install the app] (#Install)
+
+## <a name="Demo"></a> Demo
+
+## <a name="Goals"></a> Goals
+
+## <a name="Technologies"></a> Technologies
+
+## <a name="Story"></a> User storie, Wireframe amd Datamodel
+
+## <a name="Git"></a> Git Workflow
+
+## <a name="Server"></a> Server repo
+
+## <a name="Install"></a> How to install the app
+
+
 ## Available Scripts
 
 In the project directory, you can run:
