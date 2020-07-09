@@ -32,7 +32,7 @@ Mindfull Menu App is a React progressive web app. What does it mean? This is an 
 
 **Smartphone Homescreen**
 
-<img src="https://media.giphy.com/media/dyRSwt9oJasfEn5Idg/giphy.gif" width="40%" />
+<img src="https://media.giphy.com/media/dyRSwt9oJasfEn5Idg/giphy.gif" width="30%" />
 
 ## <a name="Goals"></a> Goals
 
