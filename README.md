@@ -1,6 +1,6 @@
 # Mindful Menu App 
 
-:point_right: Click [HERE](https://eager-mccarthy-776004.netlify.app/) to check out the deployed version.
+:point_right: Click [HERE](https://zealous-bohr-e978d2.netlify.app/breakfast) to check out the deployed version.
 
 ## Introduction
 
