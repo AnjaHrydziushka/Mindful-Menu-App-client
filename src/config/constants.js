@@ -1,1 +1,1 @@
-export const API_URL = "https://mindful-menu-app-server.herokuapp.com/";
+export const API_URL = "https://mindful-menu-app.herokuapp.com/";
