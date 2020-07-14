@@ -65,7 +65,7 @@ Also my goals were:
 
 ## <a name="Story"></a> User stories, Wireframe amd Datamodel
 
-The [wireframe](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/fileexport/Export_Db790fc09326e584845c3111cf065040d.pdf) and [datamodel](https://app.lucidchart.com/invitations/accept/67d6ec63-a882-4ed9-8451-e9b538320e08) I used for my project.
+The [wireframe](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/fileexport/Export_D6d7661a53d3c4da9e926cdea23bdb4ce.pdf) and [datamodel](https://app.lucidchart.com/invitations/accept/67d6ec63-a882-4ed9-8451-e9b538320e08) I used for my project.
 
 User stories and my plans for an app extention can be found [HERE](https://github.com/AnjaHrydziushka/Mindful-Menu-App-client/projects/1).
 
