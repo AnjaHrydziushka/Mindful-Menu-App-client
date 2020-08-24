@@ -21,7 +21,7 @@ Mindfull Menu App is a React progressive web app. What does it mean? This is an 
 + [Technologies](#Technologies)
 + [User storie, Wireframe amd Datamodel](#Story)
 + [Git Workflow](#Git)
-+ [Server repo](Server)
++ [Server repo](#Server)
 + [How to install and use the app](#Install)
 
 ## <a name="Demo"></a> Demo
