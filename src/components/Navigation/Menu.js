@@ -12,7 +12,6 @@ export default function Menu() {
   const token = useSelector(selectToken);
   console.log("TOKEN", token)
 
-  
   return (
     <>
       {open && <div className="FullscreenMenu">
