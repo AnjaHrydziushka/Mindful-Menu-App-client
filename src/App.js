@@ -6,6 +6,7 @@ import TagRecipes from './pages/TagRecipes';
 import Menu from './components/Navigation/Menu';
 import MyMenu from './pages/MyMenu';
 import NavBar from './components/Navigation/NavBar';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/menu" component={MyMenu} />
         <Route path="/recipes/:id" component={OneRecipe} />
         <Route path="/:tag" component={TagRecipes} />
+        <Route path="/login" component={LoginPage} />
       </Switch>
        <Menu />
     </div>
