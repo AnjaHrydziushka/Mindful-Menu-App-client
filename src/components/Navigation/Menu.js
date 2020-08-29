@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Menu.css";
 import { useHistory } from "react-router-dom";
+import { selectToken } from '../../store/auth/selectors';
+import { useSelector } from 'react-redux';
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
   const history = useHistory();
-  
+
+  const token = useSelector(selectToken);
+  console.log("TOKEN", token)
+
   return (
     <>
       {open && <div className="FullscreenMenu">
@@ -16,7 +21,8 @@ export default function Menu() {
             {displayName: "Lunch", path: "/lunch"}, 
             {displayName: "Snack", path: "/snack"}, 
             {displayName: "Dinner", path: "/dinner"},
-            {displayName: "Menu", path: "/menu"}].map((item, i) => {
+            {displayName: "Menu", path: "/menu"},
+            {displayName: "Login/Signup", path: "/login"}].map((item, i) => {
               return (
                 <li key={i} style={{ animationDelay: `${100 * i}ms` }}>
                   <a
