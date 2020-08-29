@@ -7,7 +7,7 @@ const loginSuccess = (token) => {
     }
 }
 
-const logOut = () => { 
+export const logOut = () => { 
     return {
         type: 'log_out' 
     }

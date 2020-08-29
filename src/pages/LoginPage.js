@@ -15,7 +15,6 @@ export default function LoginPage() {
   const dispatch = useDispatch();
 
   const token = useSelector(selectToken);
-  console.log("TOKEN", token)
 
   useEffect(() => {
     if (token !== null) {
