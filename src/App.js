@@ -14,10 +14,10 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={RecipesList} />
+        <Route path="/login" component={LoginPage} />
         <Route path="/menu" component={MyMenu} />
         <Route path="/recipes/:id" component={OneRecipe} />
         <Route path="/:tag" component={TagRecipes} />
-        <Route path="/login" component={LoginPage} />
       </Switch>
        <Menu />
     </div>
