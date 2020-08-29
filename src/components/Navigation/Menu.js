@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Menu.css";
 import { useHistory } from "react-router-dom";
+import { selectToken } from '../../store/auth/selectors';
+import { useSelector } from 'react-redux';
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
   const history = useHistory();
+
+  const token = useSelector(selectToken);
+  console.log("TOKEN", token)
+
   
   return (
     <>

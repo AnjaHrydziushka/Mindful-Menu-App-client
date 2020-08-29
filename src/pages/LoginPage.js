@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../store/auth/actions';
 
 export default function LoginPage() {
@@ -12,7 +12,7 @@ export default function LoginPage() {
     event.preventDefault();
     dispatch(login(email, password));
     console.log("TODO login with:", email, password);
-
+    
     setEmail("")
     setPassword("")
   }
