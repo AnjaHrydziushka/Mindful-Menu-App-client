@@ -20,13 +20,13 @@ export default function NavBar() {
                     Mindful Menu
                 </a>
                 
-                <a 
-                className="nav-link"
-                href="#"
+                { token ? <button 
+                className="btn btn-sm btn-outline-secondary"
+                type="button"
                 onClick={() => dispatch(logOut())}
                 >
                     Logout
-                </a>
+                </button> : null }
             </nav>
         </div>
     )
